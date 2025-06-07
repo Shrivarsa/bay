@@ -7,8 +7,24 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          animations: ['framer-motion', 'gsap'],
+          ui: ['lucide-react', 'react-scroll', 'react-intersection-observer']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000,
+    sourcemap: false
+  },
   server: {
     port: 3000,
     open: true,
   },
+  define: {
+    global: 'globalThis',
+  }
 });

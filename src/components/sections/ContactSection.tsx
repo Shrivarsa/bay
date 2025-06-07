@@ -178,6 +178,7 @@ const ContactSection: React.FC = () => {
           src="https://ik.imagekit.io/qcf813yjh/banna%20leaf%20food%20pictures%20(1).webp"
           alt="Banana leaf food background"
           className="absolute w-full h-full object-cover min-h-screen min-w-full"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gray-900/60 z-0"></div>
       </div>
